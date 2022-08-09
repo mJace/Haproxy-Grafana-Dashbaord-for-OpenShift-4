@@ -16,8 +16,8 @@
     "editable": true,
     "gnetId": 364,
     "graphTooltip": 1,
-    "id": 2,
-    "iteration": 1660030656173,
+    "id": 7,
+    "iteration": 1660031327645,
     "links": [],
     "panels": [
       {
@@ -91,7 +91,7 @@
             "expr": "irate(haproxy_backend_http_responses_total{backend=~\"$backend\", code=~\"$code\"}[180s])",
             "interval": "$interval",
             "intervalFactor": 1,
-            "legendFormat": "{{ backend }}/{{ code }}",
+            "legendFormat": "{{ backend }}/{{ code }} - NS:{{exported_namespace}} - Route:{{route}}",
             "metric": "haproxy_backend_current_queue",
             "refId": "A",
             "step": 60
@@ -1452,5 +1452,5 @@
     "timezone": "browser",
     "title": "HAproxy Backend for OpenShift 4 Router",
     "uid": "sOHBjgi4k",
-    "version": 2
+    "version": 1
   }
